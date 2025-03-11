@@ -21,7 +21,7 @@ A full-featured calculator web application built with Laravel that provides basi
 
     ```bash
     git clone https://github.com/khalidedaig/app.calculator.test.git
-    cd app.calculator
+    cd app.calculator.test
     ```
 
 2. Install PHP dependencies
