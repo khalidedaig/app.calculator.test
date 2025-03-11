@@ -64,6 +64,7 @@ class OperationHandler
     public function storeAnOperation(Request $request, OperationsModel $operationModel): array
     {
         $operationToExecute = $this->getOperationToExecuteFromRequest($request->get('operation'));
+        
         $result = $this->getResultFromOperation($operationToExecute);
 
         $response = [

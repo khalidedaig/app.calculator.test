@@ -51,6 +51,9 @@ if (!function_exists('division')) {
     function division(Stringable $operation): string
     {
         $operatings = validateOperatings($operation->split('/[\/]+/'));
+        if ($operatings[1] == 0) {
+            throw new Exception('Division by zero is not allowed.');
+        }
         $result = $operatings[0] / $operatings[1];
 
         return (string) $result;

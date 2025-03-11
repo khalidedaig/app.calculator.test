@@ -51,15 +51,7 @@ class Calculator
             ];
 
             return response()->json($response, HttpResponses::HTTP_RESPONSE_BAD_REQUEST->value);
-        } catch (Exception $exception) {
-            $response = [
-                'error' => 'Calculation Error',
-                'exception' => $exception->getMessage(),
-                'operation' => $request->get('operation'),
-            ];
-
-            return response()->json($response, HttpResponses::HTTP_RESPONSE_BAD_REQUEST->value);
-        }
+        } 
     }
 
     public function delete(OperationsModel $operationModel): JsonResponse
